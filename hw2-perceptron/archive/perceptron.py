@@ -6,8 +6,8 @@ def new_weight():
 
 def dense_sparse_dot_product(arr, dic):
     total = 0
-    for i,el in enumerate(arr):
-        total += el * (dic[i] if i in dic else 0)
+    for i in dic:
+        total += arr[i] * dic[i]
     return total
 
 def sparse_sparse_dot_product(dic1, dic2):
