@@ -1,0 +1,302 @@
+Extracting data from files...
+--- Majority Baseline ---
+
+Test Accuracy: 470/940 (0.5000)
+Dev Accuracy: 310/564 (0.5496)
+
+--- 1. SVM Experiment ---
+
+Cross-validating to find best hyperparameters in {'tradeoff': [10, 1, 0.1, 0.01, 0.001, 0.0001], 'learning_rate': [10, 1, 0.1, 0.01, 0.001, 0.0001]} ...
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+* Best Params: {'tradeoff': 10, 'learning_rate': 0.0001}
+* Best Params Average Cross-val Accuracy: 0.8637
+Training on 'train', testing against 'dev' - for 20 epochs ...
+* Epoch  1 Dev Accuracy: 0.8138
+* Epoch  2 Dev Accuracy: 0.7996
+* Epoch  3 Dev Accuracy: 0.8440
+* Epoch  4 Dev Accuracy: 0.8546
+* Epoch  5 Dev Accuracy: 0.8617
+* Epoch  6 Dev Accuracy: 0.8635
+* Epoch  7 Dev Accuracy: 0.8706
+* Epoch  8 Dev Accuracy: 0.8652
+* Epoch  9 Dev Accuracy: 0.8688
+* Epoch 10 Dev Accuracy: 0.8688
+* Epoch 11 Dev Accuracy: 0.8617
+* Epoch 12 Dev Accuracy: 0.8723
+* Epoch 13 Dev Accuracy: 0.8723
+* Epoch 14 Dev Accuracy: 0.8688
+* Epoch 15 Dev Accuracy: 0.8706
+* Epoch 16 Dev Accuracy: 0.8741
+* Epoch 17 Dev Accuracy: 0.8777
+* Epoch 18 Dev Accuracy: 0.8706
+* Epoch 19 Dev Accuracy: 0.8830
+* Epoch 20 Dev Accuracy: 0.8777
+* Train Updates: 45080
+Testing against 'train', using best epoch weights (epoch = 19)
+* Train Accuracy: 2217/2254 (0.9836)
+Testing against 'test', using best epoch weights (epoch = 19)
+* Test Accuracy: 814/940 (0.8660)
+
+--- 2. Logistic Regression Experiment ---
+
+Cross-validating to find best hyperparameters in {'sigma_squared': [0.1, 1, 10, 100, 1000, 10000], 'learning_rate': [1, 0.1, 0.01, 0.001, 0.0001, 1e-05]} ...
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+* Best Params: {'sigma_squared': 100, 'learning_rate': 1e-05}
+* Best Params Average Cross-val Accuracy: 0.8747
+Training on 'train', testing against 'dev' - for 20 epochs ...
+* Epoch  1 Dev Accuracy: 0.5887
+* Epoch  2 Dev Accuracy: 0.6294
+* Epoch  3 Dev Accuracy: 0.6489
+* Epoch  4 Dev Accuracy: 0.6702
+* Epoch  5 Dev Accuracy: 0.7039
+* Epoch  6 Dev Accuracy: 0.7234
+* Epoch  7 Dev Accuracy: 0.7411
+* Epoch  8 Dev Accuracy: 0.7553
+* Epoch  9 Dev Accuracy: 0.7713
+* Epoch 10 Dev Accuracy: 0.7713
+* Epoch 11 Dev Accuracy: 0.7695
+* Epoch 12 Dev Accuracy: 0.7677
+* Epoch 13 Dev Accuracy: 0.7748
+* Epoch 14 Dev Accuracy: 0.7784
+* Epoch 15 Dev Accuracy: 0.7784
+* Epoch 16 Dev Accuracy: 0.7837
+* Epoch 17 Dev Accuracy: 0.7837
+* Epoch 18 Dev Accuracy: 0.7819
+* Epoch 19 Dev Accuracy: 0.7819
+* Epoch 20 Dev Accuracy: 0.7837
+* Train Updates: 45080
+Testing against 'train', using best epoch weights (epoch = 16)
+* Train Accuracy: 1771/2254 (0.7857)
+Testing against 'test', using best epoch weights (epoch = 16)
+* Test Accuracy: 711/940 (0.7564)
+
+--- 3. Naive Bayes Experiment ---
+
+Cross-validating to find best hyperparameters in {'smoothing': [2.0, 1.5, 1.0, 0.5]} ...
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+* Best Params: {'smoothing': 0.5}
+* Best Params Average Cross-val Accuracy: 0.5848
+Testing against 'train'
+* Train Accuracy: 1663/2818 (0.5901)
+Testing against 'test'
+* Test Accuracy: 548/940 (0.5830)
+
+/\/\ ...Growing a forest for latter experiments... /\/\ 
+
+1000/1000
+
+--- 4. Bagged Forest Experiment ---
+
+Testing ensemble against 'train'
+* Train Accuracy: 2065/2818 (0.7328)
+Testing ensemble against 'test'
+* Test Accuracy: 687/940 (0.7309)
+
+--- 5. SVM Over Trees Experiment ---
+
+Cross-validating to find best hyperparameters in {'tradeoff': [10, 1, 0.1, 0.01, 0.001, 0.0001], 'learning_rate': [10, 1, 0.1, 0.01, 0.001, 0.0001]} ...
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+* Best Params: {'tradeoff': 1, 'learning_rate': 0.0001}
+* Best Params Average Cross-val Accuracy: 0.8300
+Training on 'train', testing against 'dev' - for 20 epochs ...
+* Epoch  1 Dev Accuracy: 0.8050
+* Epoch  2 Dev Accuracy: 0.8121
+* Epoch  3 Dev Accuracy: 0.8085
+* Epoch  4 Dev Accuracy: 0.8191
+* Epoch  5 Dev Accuracy: 0.8209
+* Epoch  6 Dev Accuracy: 0.8280
+* Epoch  7 Dev Accuracy: 0.8227
+* Epoch  8 Dev Accuracy: 0.8191
+* Epoch  9 Dev Accuracy: 0.8191
+* Epoch 10 Dev Accuracy: 0.8174
+* Epoch 11 Dev Accuracy: 0.8227
+* Epoch 12 Dev Accuracy: 0.8209
+* Epoch 13 Dev Accuracy: 0.8262
+* Epoch 14 Dev Accuracy: 0.8174
+* Epoch 15 Dev Accuracy: 0.8209
+* Epoch 16 Dev Accuracy: 0.8227
+* Epoch 17 Dev Accuracy: 0.8209
+* Epoch 18 Dev Accuracy: 0.8245
+* Epoch 19 Dev Accuracy: 0.8227
+* Epoch 20 Dev Accuracy: 0.8245
+* Train Updates: 45080
+Testing against 'train', using best epoch weights (epoch = 6)
+* Train Accuracy: 1900/2254 (0.8429)
+Testing against 'test', using best epoch weights (epoch = 6)
+* Test Accuracy: 747/940 (0.7947)
+
+--- 6. Logistic Regression Over Trees Experiment ---
+
+Cross-validating to find best hyperparameters in {'sigma_squared': [0.1, 1, 10, 100, 1000, 10000], 'learning_rate': [1, 0.1, 0.01, 0.001, 0.0001, 1e-05]} ...
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+Fold: 5/5
+* Best Params: {'sigma_squared': 10000, 'learning_rate': 1e-05}
+* Best Params Average Cross-val Accuracy: 0.8449
+Training on 'train', testing against 'dev' - for 20 epochs ...
+* Epoch  1 Dev Accuracy: 0.7376
+* Epoch  2 Dev Accuracy: 0.7642
+* Epoch  3 Dev Accuracy: 0.7713
+* Epoch  4 Dev Accuracy: 0.7730
+* Epoch  5 Dev Accuracy: 0.7748
+* Epoch  6 Dev Accuracy: 0.7801
+* Epoch  7 Dev Accuracy: 0.7819
+* Epoch  8 Dev Accuracy: 0.7855
+* Epoch  9 Dev Accuracy: 0.7890
+* Epoch 10 Dev Accuracy: 0.7926
+* Epoch 11 Dev Accuracy: 0.7943
+* Epoch 12 Dev Accuracy: 0.7943
+* Epoch 13 Dev Accuracy: 0.7943
+* Epoch 14 Dev Accuracy: 0.7979
+* Epoch 15 Dev Accuracy: 0.7979
+* Epoch 16 Dev Accuracy: 0.7979
+* Epoch 17 Dev Accuracy: 0.8014
+* Epoch 18 Dev Accuracy: 0.8014
+* Epoch 19 Dev Accuracy: 0.8014
+* Epoch 20 Dev Accuracy: 0.8014
+* Train Updates: 45080
+Testing against 'train', using best epoch weights (epoch = 17)
+* Train Accuracy: 1809/2254 (0.8026)
+Testing against 'test', using best epoch weights (epoch = 17)
+* Test Accuracy: 731/940 (0.7777)
