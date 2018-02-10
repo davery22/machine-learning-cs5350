@@ -1,0 +1,2 @@
+# Machine Learning
+Following my expedited research for an ML project during my summer at Qualtrics, I figured it would be nice to get a proper education. The U's ML course focuses primarily on binary classification, with mathematical emphasis on defining and relating notions of learnability. The projects are hands-on implementations of some of the models we studied, and they all come together for the experiment that is the class project/Kaggle competition: [Twitter spambot classification](https://www.kaggle.com/c/uofu-ml-fall-2017)
